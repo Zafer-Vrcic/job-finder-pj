@@ -6,6 +6,7 @@ import store from "../redux/store";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Card from "../components/Card";
+import Filter from "../components/Filter";
 
 const JobList = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,10 @@ const JobList = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(state);
+
   return (
     <div className="list-page">
+      <Filter jobs={state.jobs} />
       {/* 
     1)is still loading / loader
     2)is loading done and there is error/press to again button

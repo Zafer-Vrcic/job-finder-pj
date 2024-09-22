@@ -1,3 +1,3 @@
-export const statusOpt = ["Mülakat", "Devam Ediyor", "Reddedildi"];
-export const typeOpt = ["Tam Zamanlı", "Yarı Zamanlı", "Uzaktan", "Staj"];
-export const sortOpt = ["a-z", "z-a", "En Yeni", "En Eski"];
+export const statusOpt = ["Interview", "Continues", "Denied"];
+export const typeOpt = ["Full-Time", "Hybrid", "Remote", "Internship"];
+export const sortOpt = ["A-Z", "Z-A", "Latest", "Oldest"];
