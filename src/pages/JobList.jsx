@@ -5,6 +5,7 @@ import axios from "axios";
 import store from "../redux/store";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
+import Card from "../components/Card";
 
 const JobList = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const JobList = () => {
     dispatch(setLoading());
     // 2)if data ok,send to store
     axios
-      .get("http://localhost:40001/jobs")
+      .get("http://localhost:4000/jobs")
       .then((res) => dispatch(setJobs(res.data)))
       // 3)if thre is error update to store
       .catch((err) => dispatch(setError(err.message)));
@@ -28,17 +29,27 @@ const JobList = () => {
   }, []);
   console.log(state);
   return (
-    <div>
-      {/* 1)is still loading / loader
+    <div className="list-page">
+      {/* 
+    1)is still loading / loader
     2)is loading done and there is error/press to again button
     3)is loading is done and there is no error/push to data card
-*/}
+    */}
       {state.isLoading ? (
-        <p><Loader/></p>
+        <p>
+          <Loader />
+        </p>
       ) : state.isError ? (
-        <div> <Error/></div>
+        <div className="error">
+          <Error />
+          <button onClick={fetchData}>Try Again</button>
+        </div>
       ) : (
-        <div>kartlar</div>
+        <div className="job-list">
+          {state.jobs.map((job) => (
+            <Card job={job} key={job.id} />
+          ))}
+        </div>
       )}
     </div>
   );

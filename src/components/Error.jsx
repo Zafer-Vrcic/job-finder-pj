@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Error = () => {
   return (
@@ -33,7 +33,7 @@ const Error = () => {
         <div className="screen_out">
           <div className="screen_out1">
             <div className="screen">
-              <span className="notfound_text"> NOT FOUND</span>
+              <span className="notfound_text"> Please refresh your page or try again later. </span>
             </div>
           </div>
         </div>
