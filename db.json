@@ -1,3 +1,22 @@
 {
-  "jobs": []
+  "jobs": [
+    {
+      "id": "b10f154d-13cb-4bf9-ade7-bfbd53ca2896",
+      "position": "Frontend",
+      "company": "IstanbulTec",
+      "location": "Istanbul",
+      "status": "Interview",
+      "type": "Full-Time",
+      "date": "22.09.2024"
+    },
+    {
+      "id": "5380ba56-6f7c-4e14-895e-0093e51cca9c",
+      "position": "Backend",
+      "company": "Udemig",
+      "location": "Istanbul",
+      "status": "Denied",
+      "type": "Hybrid",
+      "date": "22.09.2024"
+    }
+  ]
 }

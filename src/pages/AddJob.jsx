@@ -39,12 +39,12 @@ const AddJob = () => {
       .post("http://localhost:4000/jobs", newJob)
       //if success put in the store
       .then(() => {
-        toast.success("yeni iş eklendi");
+        toast.success("New Job added");
         navigate("/");
         dispatch(createJob(newJob));
       })
       //if fail show me to error
-      .catch(() => console.log(toast.error("ekleme işleminde sorun oluştu")));
+      .catch(() => console.log(toast.error("when you adding,there is a problem")));
   };
   //delete a data if the same(duplicated)
   const removeDuplicated = (key) => {

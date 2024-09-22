@@ -14,4 +14,4 @@ React Router: For navigation between different pages.
 
 <h1>Project Gif</h1>
 
-<img src="t-pj.giff" alt="">
+<img src="public\jobf.gif" alt="">
