@@ -20,7 +20,6 @@ const JobList = () => {
     axios
       .get("http://localhost:4000/jobs")
       .then((res) => dispatch(setJobs(res.data)))
-      // 3)if thre is error update to store
       .catch((err) => dispatch(setError(err.message)));
   };
   // after calling a function,show the data
